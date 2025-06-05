@@ -1,0 +1,31 @@
+{
+  "name": "thanks-wiki",
+  "version": "1.0.0",
+  "description": "A lightweight, multilingual wiki-style documentation site built with Astro. Focused on decentralization, ActivityPub, and open source technologies.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  },
+  "keywords": [
+    "astro",
+    "wiki",
+    "static site",
+    "documentation",
+    "multilingual",
+    "decentralization",
+    "activitypub",
+    "open source",
+    "thanksstevenkim",
+    "personal knowledge base"
+  ],
+  "author": {
+    "name": "thanksstevenkim",
+    "url": "https://thanksstevenkim.dev"
+  },
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.1"
+}
