@@ -1,0 +1,17 @@
+---
+const { entry, lang } = Astro.props;
+---
+
+<html lang={lang}>
+    <head>
+        <title>{entry.data.title}</title>
+    </head>
+    <body>
+        <main>
+            <h1>{entry.data.title}</h1>
+            <article>
+                <entry.render />
+            </article>
+        </main>
+    </body>
+</html>
