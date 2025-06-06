@@ -8,7 +8,7 @@
     "build": "astro build"
   },
   "dependencies": {
-    "astro": "^4.0.0"
+    "astro": "^5.9.0"
   },
   "keywords": [
     "astro",
@@ -26,6 +26,6 @@
     "name": "thanksstevenkim",
     "url": "https://thanksstevenkim.dev"
   },
-  "license": "ISC",
+  "license": "MIT",
   "packageManager": "pnpm@10.11.1"
 }
