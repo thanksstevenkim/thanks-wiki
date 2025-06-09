@@ -1,16 +1,16 @@
 ---
-const { entry, lang } = Astro.props;
+const { title, Content, lang } = Astro.props;
 ---
 
 <html lang={lang}>
     <head>
-        <title>{entry.data.title}</title>
+        <title>{title}</title>
     </head>
     <body>
         <main>
-            <h1>{entry.data.title}</h1>
+            <h1>{title}</h1>
             <article>
-                <entry.render />
+                <Content />
             </article>
         </main>
     </body>

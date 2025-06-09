@@ -1,5 +1,5 @@
 ---
-import { getEntry, getCollection } from 'astro:content';
+const docsImport = import.meta.glob('../../content/docs/**/*.md');
 import DocLayout from '@/layouts/DocLayout.astro';
 
 const { locale, slug } = Astro.params ?? {};
@@ -9,27 +9,30 @@ if (!locale) {
 const slugPath = Array.isArray(slug) ? slug.join('/') : (slug ?? '');
 // If no slug was provided (index route), use 'index'
 const entrySlug = slugPath === '' ? `${locale}/index` : `${locale}/${slugPath}`;
-const { Content, data } = await (await getEntry('docs', entrySlug)).render();
+const docKey = `/src/content/docs/${entrySlug}.md`;
+const loadDoc = docsImport[docKey];
+if (!loadDoc) {
+  throw new Error(`Doc not found: ${entrySlug}`);
+}
+const { frontmatter: data, default: Content } = await loadDoc();
 
 export async function getStaticPaths() {
-  const docs = await getCollection('docs');
-
-  return docs.map((doc) => {
-    const [locale, ...slugParts] = doc.slug.split('/');
-    const slug = slugParts.length === 1 && slugParts[0] === 'index'
+  const docsImport = import.meta.glob('../../content/docs/**/*.md');
+  return Object.keys(docsImport).map((path) => {
+    const slugParts = path
+      .replace('/src/content/docs/', '')
+      .replace(/\.md$/, '')
+      .split('/');
+    const [locale, ...rest] = slugParts;
+    const slug = rest.length === 1 && rest[0] === 'index'
       ? undefined
-      : slugParts.length <= 1
-        ? slugParts[0]
-        : slugParts;
-
-    return {
-      params: { locale, slug },
-    };
+      : rest.length <= 1
+        ? rest[0]
+        : rest;
+    return { params: { locale, slug } };
   });
 }
 
 ---
 
-<DocLayout title={data.title}>
-  <Content />
-</DocLayout>
+<DocLayout title={data.title} Content={Content} lang={locale} />
