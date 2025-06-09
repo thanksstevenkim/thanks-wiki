@@ -1,5 +1,7 @@
 ---
-const docsImport = import.meta.glob('../../content/docs/**/*.md');
+const docsImport = import.meta.glob('/src/content/docs/**/*.md', { eager: true });
+// Vite's glob helper injects a reference named `i`; declare it to avoid errors
+const i = {};
 import DocLayout from '@/layouts/DocLayout.astro';
 
 const { locale, slug } = Astro.params ?? {};
@@ -10,17 +12,17 @@ const slugPath = Array.isArray(slug) ? slug.join('/') : (slug ?? '');
 // If no slug was provided (index route), use 'index'
 const entrySlug = slugPath === '' ? `${locale}/index` : `${locale}/${slugPath}`;
 const docKey = `/src/content/docs/${entrySlug}.md`;
-const loadDoc = docsImport[docKey];
-if (!loadDoc) {
+const mod = docsImport[docKey];
+if (!mod) {
   throw new Error(`Doc not found: ${entrySlug}`);
 }
-const { frontmatter: data, default: Content } = await loadDoc();
+const { frontmatter: data, default: Content } = mod;
 
 export async function getStaticPaths() {
-  const docsImport = import.meta.glob('../../content/docs/**/*.md');
+  const docsImport = import.meta.glob('/src/content/docs/**/*.md', { eager: true });
   return Object.keys(docsImport).map((path) => {
     const slugParts = path
-      .replace('/src/content/docs/', '')
+      .replace(/^.*?\/content\/docs\//, '')
       .replace(/\.md$/, '')
       .split('/');
     const [locale, ...rest] = slugParts;
