@@ -3,41 +3,29 @@ import { getEntry, getCollection } from 'astro:content';
 import DocLayout from '@/layouts/DocLayout.astro';
 
 const { locale, slug } = Astro.params ?? {};
-console.log('Astro.params:', Astro.params);
-if (!locale || !slug) throw new Error(`Missing route parameters`);
-const slugPath = Array.isArray(slug) ? slug.join('/') : slug;
-const id = `${locale}/${slugPath}.md`;
-const docs = await getCollection('docs');
-
-const matched = docs.find((d) => d.id === id);
-
-if (!matched) {
-  throw new Error(`Document not found via getCollection: ${id}`);
+if (!locale) {
+  throw new Error(`Missing route parameters`);
 }
-
-const rendered = await matched.render();
-const { Content, data } = rendered;
+const slugPath = Array.isArray(slug) ? slug.join('/') : (slug ?? '');
+// If no slug was provided (index route), use 'index'
+const entrySlug = slugPath === '' ? `${locale}/index` : `${locale}/${slugPath}`;
+const { Content, data } = await (await getEntry('docs', entrySlug)).render();
 
 export async function getStaticPaths() {
   const docs = await getCollection('docs');
-  console.log(docs.map(d => d.id))
 
   return docs.map((doc) => {
-  const cleanId = doc.id.replace(/\.md$/, '');
-  const [locale, ...slugParts] = cleanId.split('/');
+    const [locale, ...slugParts] = doc.slug.split('/');
+    const slug = slugParts.length === 1 && slugParts[0] === 'index'
+      ? undefined
+      : slugParts.length <= 1
+        ? slugParts[0]
+        : slugParts;
 
-  // ✅ index.md → slugParts = [] ← 이때 slug가 없어짐
-  const slug = slugParts.length === 0
-    ? [] // Astro가 /docs/kr/ 같은 경로로 인식하게 만듦
-    : slugParts.length === 1
-      ? slugParts[0]
-      : slugParts;
-
-  return {
-    params: { locale, slug },
-  };
-});
-
+    return {
+      params: { locale, slug },
+    };
+  });
 }
 
 ---

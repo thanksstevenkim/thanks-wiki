@@ -1,11 +1,11 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const docs = defineCollection({
   schema: z.object({
     title: z.string(),
-    lang: z.enum(["kr", "en", "jp"]),
+    lang: z.enum(['kr', 'en', 'jp']),
   }),
-  slug: ({ id }) => id.replace(/\.md$/, ""), // ✅ 이 줄이 핵심
+  slug: ({ id }) => id.replace(/\.md$/, ''),
 });
 
 export const collections = { docs };
