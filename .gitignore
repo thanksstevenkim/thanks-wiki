@@ -1,8 +1,5 @@
 node_modules/
 dist/
 .build/
-src/content/docs/en/*
-src/content/docs/jp/*
-src/content/docs/kr/*
 .env
 .astro/
