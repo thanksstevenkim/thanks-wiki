@@ -5,7 +5,6 @@ const docs = defineCollection({
     title: z.string(),
     lang: z.enum(["kr", "en", "jp"]),
   }),
-  slug: ({ id }) => id.replace(/\.md$/, ""), // ✅ 이 줄이 핵심
 });
 
 export const collections = { docs };
