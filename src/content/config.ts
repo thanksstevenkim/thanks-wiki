@@ -5,7 +5,7 @@ const docs = defineCollection({
     title: z.string(),
     lang: z.enum(['kr', 'en', 'jp']),
   }),
-  slug: ({ id }) => id.replace(/\.md$/, ''),
+  slug: ({ id }) => id.replace(/^docs\//, '').replace(/\.md$/, ''),
 });
 
 export const collections = { docs };
