@@ -116,3 +116,9 @@ UI나 기능은 완성되지 않아도 괜찮지만,
 - Code: MIT License
 - Content: CC BY-NC-ND 4.0 (see CONTENT_LICENSE.md)
 
+## Notice
+
+This repository and https://thanks-wiki.vercel.app constitute the **only official source** of thanks-wiki.
+
+Forks and mirrors must not present themselves as official or authoritative versions of this project.
+
