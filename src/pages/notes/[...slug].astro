@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, getEntryBySlug } from 'astro:content';
+
+export async function getStaticPaths() {
+  const notes = await getCollection('notes');
+  return notes.map((note) => ({ params: { slug: note.slug } }));
+}
+
+const { slug } = Astro.params;
+const slugPath = Array.isArray(slug) ? slug.join('/') : slug ?? '';
+const entry = await getEntryBySlug('notes', slugPath);
+
+if (!entry) {
+  throw new Error(`Note not found: ${slugPath}`);
+}
+
+const rendered = await entry.render();
+const allNotes = await getCollection('notes');
+const slugSet = new Set(allNotes.map((note) => note.slug));
+
+const findLinks = (body: string) => {
+  const results = new Set<string>();
+  const wikiPattern = /\[\[([^\]|]+)(?:\|[^\]]*)?\]\]/g;
+  let match;
+  while ((match = wikiPattern.exec(body)) !== null) {
+    const target = match[1].trim();
+    if (slugSet.has(target)) results.add(target);
+  }
+  const mdLinkPattern = /\[[^\]]*\]\(([^)]+)\)/g;
+  while ((match = mdLinkPattern.exec(body)) !== null) {
+    let target = match[1];
+    if (target.startsWith('/notes/')) {
+      target = target.replace(/^\/notes\//, '').replace(/\/$/, '');
+      if (slugSet.has(target)) results.add(target);
+    }
+  }
+  return Array.from(results);
+};
+
+const outgoing = findLinks(entry.body);
+const backlinks = allNotes
+  .filter((note) => note.slug !== entry.slug)
+  .filter((note) => findLinks(note.body).includes(entry.slug));
+---
+
+<BaseLayout title={entry.data.title}>
+  <article class="card">
+    <header style="margin-bottom: 1rem;">
+      <p class="muted" style="margin: 0 0 0.25rem 0;">{entry.data.status ?? 'note'}</p>
+      <h1 style="margin: 0 0 0.5rem 0;">{entry.data.title}</h1>
+      {entry.data.tags && (
+        <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+          {entry.data.tags.map((tag) => <span class="chip">{tag}</span>)}
+        </div>
+      )}
+      {entry.data.date && <p class="muted" style="margin: 0.35rem 0 0 0;">최근 수정 {new Date(entry.data.date).toLocaleDateString()}</p>}
+    </header>
+
+    <div class="note-body">
+      <rendered.Content />
+    </div>
+  </article>
+
+  <section style="margin-top: 1.5rem;">
+    <h2 style="margin-bottom: 0.5rem;">이 문서에서 링크한 노트</h2>
+    {outgoing.length > 0 ? (
+      <ul>
+        {outgoing.map((slug) => {
+          const linked = allNotes.find((note) => note.slug === slug);
+          return (
+            <li>
+              <a href={`/notes/${slug}/`}>{linked?.data.title ?? slug}</a>
+            </li>
+          );
+        })}
+      </ul>
+    ) : (
+      <p class="muted">아직 연결된 노트가 없습니다.</p>
+    )}
+  </section>
+
+  <section style="margin-top: 1.5rem;">
+    <h2 style="margin-bottom: 0.5rem;">이 문서를 참고한 노트</h2>
+    {backlinks.length > 0 ? (
+      <ul>
+        {backlinks.map((note) => (
+          <li>
+            <a href={`/notes/${note.slug}/`}>{note.data.title}</a>
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="muted">백링크가 아직 없습니다.</p>
+    )}
+  </section>
+</BaseLayout>
