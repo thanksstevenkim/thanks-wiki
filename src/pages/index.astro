@@ -1,28 +1,67 @@
 ---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const notes = await getCollection('notes');
+const sortedByDate = [...notes].sort((a, b) => {
+  const aDate = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const bDate = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return bDate - aDate;
+});
+const recentNotes = sortedByDate.slice(0, 10);
+const latestUpdated = sortedByDate.slice(0, 10);
+const randomNote = notes[Math.floor(Math.random() * notes.length)];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>thanks-wiki</title>
-  </head>
-  <body style="font-family: sans-serif; padding: 2rem; max-width: 1000px; margin: auto;">
-    <!-- <img src="/logo.png" alt="thanks-wiki logo" /> -->
+<BaseLayout title="thanks-wiki">
+  <section style="margin-bottom: 2rem;">
+    <h1>thanks-wiki</h1>
+    <p class="muted">관찰-기록-연결을 빠르게 쌓는 개인 위키입니다. 미완성 기록도 환영합니다.</p>
+  </section>
 
-    <h1>🌐 Welcome to thanks-wiki</h1>
-    <p>This is a personal knowledge base built and maintained by <strong>thanksstevenkim</strong>.</p>
-    <p>You can browse the documentation in your preferred language:</p>
+  <section style="margin-bottom: 2.5rem;">
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <h2 style="margin: 0;">최근 추가된 노트</h2>
+      <a class="muted" href="/notes/">모두 보기</a>
+    </div>
+    <div style="display: grid; gap: 0.5rem; margin-top: 0.75rem;">
+      {recentNotes.map((note) => (
+        <a class="note-link" href={`/notes/${note.slug}/`}>
+          <strong>{note.data.title}</strong>
+          {note.data.date && <span class="muted" style="margin-left: 0.5rem;">{new Date(note.data.date).toLocaleDateString()}</span>}
+          <div class="muted">{note.data.status ? `status: ${note.data.status}` : '메모'}</div>
+        </a>
+      ))}
+      {recentNotes.length === 0 && <p class="muted">아직 노트가 없습니다.</p>}
+    </div>
+  </section>
 
-    <ul style="line-height: 1.8;">
-      <li><a href="/docs/kr/">🇰🇷 한국어로 보기</a></li>
-      <li><a href="/docs/en/">🇺🇸 View in English</a></li>
-      <li><a href="/docs/jp/">🇯🇵 日本語で見る</a></li>
-    </ul>
+  <section style="margin-bottom: 2.5rem;">
+    <h2 style="margin-bottom: 0.5rem;">최근 수정</h2>
+    <div class="card">
+      {latestUpdated.length > 0 ? (
+        <ul>
+          {latestUpdated.map((note) => (
+            <li>
+              <a href={`/notes/${note.slug}/`}>{note.data.title}</a>
+              {note.data.date && <span class="muted"> — {new Date(note.data.date).toLocaleDateString()}</span>}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="muted">업데이트된 노트가 없습니다.</p>
+      )}
+    </div>
+  </section>
 
-    <hr style="margin: 2rem 0;" />
-    <footer style="font-size: 0.875rem; color: #666;">
-      <p>Thanks for visiting. This project is open-source and evolving. ✨</p>
-    </footer>
-  </body>
-</html>
+  {randomNote && (
+    <section>
+      <h2 style="margin-bottom: 0.5rem;">랜덤 노트</h2>
+      <div class="card">
+        <h3 style="margin-top: 0;">{randomNote.data.title}</h3>
+        <p class="muted">무작위로 한 개의 노트를 가져왔어요.</p>
+        <a href={`/notes/${randomNote.slug}/`}>읽으러 가기</a>
+      </div>
+    </section>
+  )}
+</BaseLayout>

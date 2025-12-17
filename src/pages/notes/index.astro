@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const notes = await getCollection('notes');
+const url = new URL(Astro.request.url);
+const activeTag = url.searchParams.get('tag');
+
+const tagSet = new Set<string>();
+notes.forEach((note) => note.data.tags?.forEach((tag) => tagSet.add(tag)));
+const availableTags = Array.from(tagSet).sort();
+
+const filteredNotes = activeTag
+  ? notes.filter((note) => note.data.tags?.includes(activeTag))
+  : notes;
+
+const sortedNotes = [...filteredNotes].sort((a, b) => {
+  const aDate = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const bDate = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return bDate - aDate;
+});
+---
+
+<BaseLayout title="Notes">
+  <section style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap;">
+    <div>
+      <h1 style="margin: 0 0 0.25rem 0;">Notes</h1>
+      <p class="muted">짧은 메모도 그대로 남겨둡니다. 태그나 상태로 가볍게 탐색하세요.</p>
+    </div>
+    {activeTag && (
+      <div class="chip">tag: {activeTag}</div>
+    )}
+  </section>
+
+  {availableTags.length > 0 && (
+    <div style="margin: 1rem 0 1.5rem 0; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+      <span class="muted">태그</span>
+      {availableTags.map((tag) => (
+        <a class="chip" href={`/notes/?tag=${encodeURIComponent(tag)}`}>{tag}</a>
+      ))}
+      <a class="chip" href="/notes/">모두</a>
+    </div>
+  )}
+
+  <div style="display: grid; gap: 0.4rem;">
+    {sortedNotes.map((note) => (
+      <a class="note-link" href={`/notes/${note.slug}/`}>
+        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+          <strong>{note.data.title}</strong>
+          {note.data.status && <span class="chip">{note.data.status}</span>}
+          {note.data.tags?.map((tag) => <span class="chip">{tag}</span>)}
+        </div>
+        {note.data.date && <div class="muted">{new Date(note.data.date).toLocaleDateString()}</div>}
+      </a>
+    ))}
+
+    {sortedNotes.length === 0 && <p class="muted">조건에 맞는 노트가 없습니다.</p>}
+  </div>
+</BaseLayout>

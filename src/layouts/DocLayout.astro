@@ -1,19 +1,11 @@
 ---
+import BaseLayout from './BaseLayout.astro';
 const { title, Content, lang } = Astro.props;
 ---
 
-<html lang={lang}>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
-    </head>
-    <body style="font-family: sans-serif; padding: 2rem; max-width: 1000px; margin: auto;">
-        <main>
-            <h1>{title}</h1>
-            <article>
-                <Content />
-            </article>
-        </main>
-    </body>
-</html>
+<BaseLayout title={title}>
+  <article lang={lang} class="card">
+    <h1>{title}</h1>
+    <Content />
+  </article>
+</BaseLayout>
