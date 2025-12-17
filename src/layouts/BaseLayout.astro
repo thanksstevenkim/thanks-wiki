@@ -1,11 +1,19 @@
 ---
 const { title = 'thanks-wiki', description = 'Personal knowledge garden', children } = Astro.props;
+const canonicalUrl = Astro.url.href;
 ---
 
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:site_name" content="thanks-wiki" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={Astro.props.title ?? "thanks-wiki"} />
+    <meta property="og:description" content="A personal wiki documenting where human experience falls out of systems." />
     <title>{title}</title>
     <style>
       :root {
