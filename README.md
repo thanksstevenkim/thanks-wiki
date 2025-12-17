@@ -111,3 +111,8 @@ UI나 기능은 완성되지 않아도 괜찮지만,
 * GitHub: [https://github.com/thanksstevenkim](https://github.com/thanksstevenkim)
 * Blog: [https://thanksstevenkim.dev](https://thanksstevenkim.dev)
 
+## License
+
+- Code: MIT License
+- Content: CC BY-NC-ND 4.0 (see CONTENT_LICENSE.md)
+
