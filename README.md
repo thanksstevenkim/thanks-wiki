@@ -101,8 +101,8 @@ UI나 기능은 완성되지 않아도 괜찮지만,
 
 ## Live
 
-> **Official site**: [https://thanks-wiki.vercel.app](https://thanks-wiki.vercel.app)
-> 이 주소가 thanks-wiki의 유일한 공식 배포처입니다.
+* **Official site**: [https://thanks-wiki.vercel.app](https://thanks-wiki.vercel.app)
+* 이 주소가 thanks-wiki의 유일한 공식 배포처입니다.
 
 ---
 
@@ -110,7 +110,4 @@ UI나 기능은 완성되지 않아도 괜찮지만,
 
 * GitHub: [https://github.com/thanksstevenkim](https://github.com/thanksstevenkim)
 * Blog: [https://thanksstevenkim.dev](https://thanksstevenkim.dev)
-
-
-까지 같이 정리해줄게.
 
