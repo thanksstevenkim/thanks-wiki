@@ -17,7 +17,7 @@ lang: ko
 
 - **Fediverse:** [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/fediverse-server-community-analysis/) → 관련 concept notes → 실제 가입·이동 cases
 
-**도시 관찰:** [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/) → 현장 case의 범위와 추가 관찰 질문. 도시 전체의 대표성을 확보했다는 뜻은 아니다.
+- **도시 관찰:** [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/) → 현장 case의 범위와 추가 관찰 질문. 도시 전체의 대표성을 확보했다는 뜻은 아니다.
 - **운영 사건:** [운영 사건에서 실패 경계를 찾는 방법](/docs/kr/diagnosing-operational-boundaries/) → 마지막 성공과 첫 미확인, 복구 검증 범위를 구분한다.
 
 ## 상태와 경험
