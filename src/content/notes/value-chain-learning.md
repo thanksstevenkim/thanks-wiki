@@ -20,3 +20,5 @@ lang: ko
 남는 질문: 생산자가 자기 단계의 가격과 규격을 결정할 권한을 얻는 과정은 무엇으로 관찰할 수 있을까? [윤리적 소비의 비용은 누가 부담하는가](/notes/ethical-consumption-cost/)는 같은 사슬의 비용 배분을 묻는다.
 
 참고: [세계은행의 글로벌 가치사슬 개요](https://www.worldbank.org/ext/en/topic/trade/global-value-chains), [세계개발보고서 2020](https://www.worldbank.org/en/publication/wdr2020).
+
+원산지와 가공지가 표시되어도 가격·규격·유통을 누가 결정하는지는 별도로 확인해야 한다. [좋은 제품을 만들어도 선택지에 오르지 못할 수 있다](/notes/distribution-shapes-choice/)는 생산에서 소비자까지의 마지막 문턱을, [브랜드 포지셔닝은 검증할 가설이다](/notes/positioning-as-testable-hypothesis/)는 실제 역량을 어떤 이야기로 전달할지 검증하는 과정을 다룬다.

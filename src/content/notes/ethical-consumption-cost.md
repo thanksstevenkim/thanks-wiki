@@ -5,7 +5,7 @@ tags:
   - economy
   - society
   - choice
-status: seed
+status: growing
 lang: ko
 ---
 
@@ -18,3 +18,5 @@ lang: ko
 이것은 소비자의 판단을 무의미하게 만들지 않는다. [싼 것이 언제 선택지가 되고 언제 함정이 되는가](/notes/cheap-option-or-trap/)에서 말한 숨은 비용을 누가 감당하는지 더 구체적으로 묻는 일이다. [가치사슬에서 무엇을 배우는가](/notes/value-chain-learning/)는 생산 단계에서 누가 결정권을 가지는지 살핀다.
 
 남는 질문: 공급망의 문제를 알리는 방식이 소비자에게 죄책감만 쌓지 않으면서 실제 협상력을 바꿀 수 있을까?
+
+[인증 마크는 무엇을 증명하는가](/notes/ethical-labels-and-scope/)는 소비자가 마주하는 서로 다른 기준의 범위를 나누어 본다. [좋은 제품을 만들어도 선택지에 오르지 못할 수 있다](/notes/distribution-shapes-choice/)는 판단 가능한 대안이 애초에 진열되지 않는 문제를 더한다.

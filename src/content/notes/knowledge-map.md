@@ -27,4 +27,8 @@ lang: ko
 
 [도시 관찰에서 층위를 바꾸기](/notes/city-observation-layers/)는 지표와 거리의 경험을, [가치사슬에서 무엇을 배우는가](/notes/value-chain-learning/)는 생산량과 학습 능력을, [포트폴리오의 생성 문법](/notes/portfolio-generative-grammar/)은 작품 하나와 반복 가능한 선택을 구분한다.
 
+## 말과 시장의 경계
+
+[번역은 말의 뜻뿐 아니라 관계를 옮긴다](/notes/translation-and-social-position/)는 표현이 놓인 맥락을, [지명은 누구의 시선으로 불리는가](/notes/place-names-and-perspective/)는 이름의 관점을 묻는다. [좋은 제품을 만들어도 선택지에 오르지 못할 수 있다](/notes/distribution-shapes-choice/)와 [브랜드 포지셔닝은 검증할 가설이다](/notes/positioning-as-testable-hypothesis/)는 생산자가 만든 가치가 소비자에게 보이고 이해되는 사이의 문턱을 살핀다.
+
 이 연결은 동일한 원인이라는 주장이 아니다. 비슷한 질문을 다른 사례에서 다시 시험하기 위한 경로다. 설명이 맞아 보일 때도 **누구의 관찰이 빠졌는가, 무엇이 이어지지 않았는가**를 물을 수 있다.
