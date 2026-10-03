@@ -1,5 +1,5 @@
 ---
-const { title = 'thanks-wiki', description = 'Personal knowledge garden', children } = Astro.props;
+const { title = 'thanks-wiki', description = 'Personal knowledge garden' } = Astro.props;
 const canonicalUrl = Astro.url.href;
 ---
 
@@ -118,7 +118,7 @@ const canonicalUrl = Astro.url.href;
       </nav>
     </header>
     <main>
-      {children}
+      <slot />
     </main>
     <footer>
       <p>
