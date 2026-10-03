@@ -3,8 +3,8 @@ title: 잘 만든 결과물이 기억되지 않는 이유
 date: 2026-10-03
 tags:
   - content
-  - memory
-  - design
+  - portfolio
+  - continuity
 status: seed
 lang: ko
 ---
