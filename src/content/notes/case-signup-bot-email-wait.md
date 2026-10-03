@@ -12,13 +12,13 @@ Mastodon 가입 webhook은 도착했는데 Matrix에 검토 카드가 없으면 
 
 ## 증상
 
-관리 화면에는 가입 대기 계정이 있는데 검토 카드가 보이지 않았다. 대화에서는 가장 최근 로그를 보고 “이메일 인증을 하지 않았고 아직 24시간이 지나지 않아 안 뜨는가?”라고 문제 범위를 좁혔다.
+관리 화면에는 가입 대기 계정이 있는데 검토 카드가 보이지 않았다. 대화 검색 요약에는 이메일 미인증과 아직 지나지 않은 24시간 대기가 카드 부재를 설명하는지 검토한 질문이 남았다. 전체 대화 로그는 확보하지 못했다.
 
 ## 환경과 근거 범위
 
 Mastodon의 승인제 가입 → `account.created` webhook → Nginx → Docker의 `fedi-signup-bot` → Mastodon Admin API 상태 조회 → Matrix 검토방 → Admin API 승인·거절 구조다.
 
-공개 [signup review bot 런북](https://github.com/thanksstevenkim/mastodon-lab/blob/15b99f151f4d022534ac65b172f8f2eeee54b084/runbooks/mastodon-signup-review-bot.md) 본문과 제공된 대화 로그 발췌를 확인했다. 계정명·계정 ID·IP·룸 ID·운영 도메인은 본문 로그에서 제거했다. 출처 저장소는 본인이 공개한 기술 작업이므로 유지한다. 실제 서버나 봇 소스 코드에는 접속하지 않았다.
+공개 [signup review bot 런북](https://github.com/thanksstevenkim/mastodon-lab/blob/15b99f151f4d022534ac65b172f8f2eeee54b084/runbooks/mastodon-signup-review-bot.md) 원문과 대화 검색 반환 요약을 확인했다. 아래 로그는 공개 런북에서 확인한 문구다. 계정명·계정 ID·IP·룸 ID·운영 도메인은 본문 로그에서 제거했다. 출처 저장소는 본인이 공개한 기술 작업이므로 유지한다. 실제 서버나 봇 소스 코드에는 접속하지 않았다.
 
 런북에 기록된 이 배포의 설정은 다음과 같다. Mastodon 전체의 기본 동작이 아니다.
 
