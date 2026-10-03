@@ -17,6 +17,8 @@ lang: ko
 
 이 관점은 서버 선택을 단순한 기능 비교에서 거버넌스의 질문으로 옮긴다. [분산화가 곧 자유를 의미하지는 않는다](/notes/decentralization-not-freedom/)는 옮길 수 있는 권리의 비용을, [규칙은 사람을 바꾸기 위해 존재하는가](/notes/moderation-boundaries/)는 경계를 세우는 목적을 묻는다.
 
+새 서버를 소프트웨어·가입·관계·운영·이동의 순서로 살피는 방법은 [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/fediverse-server-community-analysis/)에서 함께 사용할 수 있다.
+
 남는 질문: 규칙을 읽지 않고 들어온 사람도 그 공간의 경계를 알아차릴 수 있을까? 운영자가 조용할 때에는 무엇이 그 경계를 보여줄까?
 
 참고: [Mastodon의 가입 절차와 서버 선택 안내](https://docs.joinmastodon.org/user/signup/), [관리자의 모더레이션 수단](https://docs.joinmastodon.org/admin/moderation/).
