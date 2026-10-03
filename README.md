@@ -4,7 +4,7 @@
 
 ## 읽는 방법
 
-[질문 지도](https://thanks-wiki.vercel.app/notes/knowledge-map/)에서 개념과 사례를 함께 읽습니다. `concept`는 여러 사례에 적용해 볼 질문, `case`는 그 질문의 출발점과 검증 범위입니다. 두 문서는 서로 링크하며 사이트가 outgoing links와 backlinks를 표시합니다.
+[Docs](https://thanks-wiki.vercel.app/docs/kr/)는 여러 Notes와 사례에서 반복된 내용을 재사용 가능한 분석 방법으로 정리합니다. [질문 지도](https://thanks-wiki.vercel.app/notes/knowledge-map/)에서는 그 방법을 만든 개념과 사례를 함께 읽습니다. `concept`는 여러 사례에 적용해 볼 질문, `case`는 그 질문의 출발점과 검증 범위입니다. Notes는 생각이 생기고 바뀐 과정과 세부 근거를 보존하며, Docs가 생겨도 삭제하거나 대체하지 않습니다.
 
 [Docs](https://thanks-wiki.vercel.app/docs/kr/)는 여러 Notes와 실제 사례에서 반복된 질문을 방문·평가 때 다시 사용할 절차로 정리합니다. Notes는 그 절차의 기원, 개별 장면, 반례와 불확실성을 보존합니다.
 

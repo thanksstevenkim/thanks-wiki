@@ -19,4 +19,6 @@ lang: ko
 
 남는 질문: 경계가 필요한 순간에도 운영 판단의 오류 가능성을 어떻게 드러낼 수 있을까? [운영자가 보이지 않을 때 커뮤니티에서 사라지는 것](/notes/operator-invisible-community/)은 응답의 가시성을 묻는다.
 
+이 질문을 서버 선택부터 신고·연합 제한·이동 비용까지 이어서 점검하는 절차는 [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/fediverse-server-community-analysis/)에서 정리한다.
+
 참고: [Mastodon 관리자 문서의 조치별 영향](https://docs.joinmastodon.org/admin/moderation/).

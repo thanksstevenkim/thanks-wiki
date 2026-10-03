@@ -11,13 +11,21 @@ lang: ko
 
 이 위키의 노트는 어떤 사례에서 어떤 질문이 나왔는지, 다음에는 무엇을 확인할지 잇는다. 처음에는 기술, 도시, 음악, 산업이 별개의 관심사처럼 보인다. 그런데 각 분야의 설명이 매끄러워질수록 그 설명에서 빠진 사람과 과정이 있다.
 
+## Docs에서 시작하는 경로
+
+여러 개념과 사례를 처음부터 분석 절차로 사용하려면 Docs에서 시작한다. 세부 논리가 생긴 과정과 증거의 범위는 연결된 Notes로 내려가 확인한다.
+
+- **Fediverse:** [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/fediverse-server-community-analysis/) → 관련 concept notes → 실제 가입·이동 cases
+
+도시 관찰 클러스터는 아직 구체적인 현장 case가 더 필요하므로 Notes 단계에 남아 있다. [도시 관찰에서 층위를 바꾸기](/notes/city-observation-layers/)에서 현재 질문과 한계를 볼 수 있다.
+
 ## 상태와 경험
 
 시스템의 정상 상태가 사람에게도 정상적인 경험일까? [무엇이 사라졌는지를 관찰하기](/notes/observing-what-disappears/)에서 출발해 [실패가 기록되지 않는 플랫폼](/notes/unrecorded-failure/)과 [가입 후 첫 관계는 어떻게 만들어지는가](/notes/first-meaningful-interaction/)로 이어진다.
 
 ## 선택지와 경계
 
-선택권이 실제로 사용할 수 있는 자유가 되는 조건은 무엇일까? [분산화가 곧 자유를 의미하지는 않는다](/notes/decentralization-not-freedom/)에서 [서버는 규칙으로 만들어지는 장소](/notes/server-as-governed-place/)와 [규칙은 사람을 바꾸기 위해 존재하는가](/notes/moderation-boundaries/)를 함께 읽을 수 있다.
+선택권이 실제로 사용할 수 있는 자유가 되는 조건은 무엇일까? 재사용 가능한 순서는 [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/fediverse-server-community-analysis/)에서 시작하고, [분산화가 곧 자유를 의미하지는 않는다](/notes/decentralization-not-freedom/), [서버는 규칙으로 만들어지는 장소](/notes/server-as-governed-place/), [규칙은 사람을 바꾸기 위해 존재하는가](/notes/moderation-boundaries/)에서 각 질문의 기원을 읽을 수 있다.
 
 ## 운영과 학습
 
