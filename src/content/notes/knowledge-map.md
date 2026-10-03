@@ -17,7 +17,8 @@ lang: ko
 
 - **Fediverse:** [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/fediverse-server-community-analysis/) → 관련 concept notes → 실제 가입·이동 cases
 
-도시 관찰 클러스터는 아직 구체적인 현장 case가 더 필요하므로 Notes 단계에 남아 있다. [도시 관찰에서 층위를 바꾸기](/notes/city-observation-layers/)에서 현재 질문과 한계를 볼 수 있다.
+**도시 관찰:** [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/) → 현장 case의 범위와 추가 관찰 질문. 도시 전체의 대표성을 확보했다는 뜻은 아니다.
+- **운영 사건:** [운영 사건에서 실패 경계를 찾는 방법](/docs/kr/diagnosing-operational-boundaries/) → 마지막 성공과 첫 미확인, 복구 검증 범위를 구분한다.
 
 ## 상태와 경험
 
@@ -29,7 +30,7 @@ lang: ko
 
 ## 운영과 학습
 
-장애와 도구 사용의 결과에서 무엇이 남아야 다음 판단이 달라질까? [장애 기록이 대응 절차가 되는 순간](/notes/incident-to-runbook/), [생성된 결과를 설명할 수 있는가](/notes/explain-the-generated-result/), [생각의 변화 이유를 남기기](/notes/documenting-thought-changes/)가 다른 규모에서 같은 질문을 다룬다.
+장애와 도구 사용의 결과에서 무엇이 남아야 다음 판단이 달라질까? [운영 사건에서 실패 경계를 찾는 방법](/docs/kr/diagnosing-operational-boundaries/)은 네 사건을 진단 순서로 묶는다. [장애 기록이 대응 절차가 되는 순간](/notes/incident-to-runbook/), [생성된 결과를 설명할 수 있는가](/notes/explain-the-generated-result/), [생각의 변화 이유를 남기기](/notes/documenting-thought-changes/)가 다른 규모에서 같은 질문을 다룬다.
 
 ## 장소, 생산, 문화
 
@@ -38,6 +39,7 @@ lang: ko
 ## 다시 사용할 방법: Docs
 
 - **도시 관찰:** [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/) → [장면·반복·구조](/notes/city-observation-layers/), [여행자와 주민](/notes/traveler-and-resident/), [도시의 제약](/notes/comparing-cities-by-constraints/), [흐름과 머묾](/notes/urban-flow-and-stay/) → [아타미·시즈오카의 현장 비교](/notes/case-atami-shizuoka-urban-rhythm/)와 [한국·일본 거시·미시 비교](/notes/case-korea-japan-macro-micro/).
+- **운영 사건:** [실패 경계를 찾는 방법](/docs/kr/diagnosing-operational-boundaries/) → [장애 기록](/notes/incident-to-runbook/) → [Cloudflare 521](/notes/case-cloudflare-521-nginx/), [Elasticsearch 이름](/notes/case-elasticsearch-service-name/), [가입 검토 봇](/notes/case-signup-bot-email-wait/), [fork CI](/notes/case-mastodon-fork-ci/).
 - **Fediverse:** [서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/) → [분산화의 이동 비용](/notes/decentralization-not-freedom/), [서버의 규칙](/notes/server-as-governed-place/), [첫 관계](/notes/first-meaningful-interaction/) → [Mastodon·Misskey 기능 비교](/notes/case-mastodon-misskey-choice/), [가입 검토 봇](/notes/case-signup-bot-email-wait/), [가입과 관계 사이](/notes/case-mastodon-onboarding/).
 
 Docs는 관찰 절차를 안내하고 Notes는 개별 질문의 기원, 실제 사례와 한계를 보존한다. 공개 사례는 비공개 도시 카드에서 필요한 장소·시간·공간 조건만 선별했다.
