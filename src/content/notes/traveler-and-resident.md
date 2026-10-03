@@ -25,3 +25,5 @@ lang: ko
 이 어긋남은 [도시를 '살기 좋은가'로만 평가하면 사라지는 것](/notes/city-beyond-liveability/)을 더 구체적으로 보여준다.
 
 짧은 방문의 관찰을 도시 전체에 대한 판정으로 바꾸기 전에, 장면과 반복과 구조를 나누어 보는 [도시 관찰에서 층위를 바꾸기](/notes/city-observation-layers/)를 참고할 수 있다. 한 거리의 인상은 다음 질문의 시작이지 대표성이 확인된 결론은 아니다.
+
+[아타미·시즈오카 현장 사례](/notes/case-atami-shizuoka-urban-rhythm/)는 관광 중 본 상점가와 역 앞 장면에서 주민의 반복 동선을 어디까지 추정할 수 있는지 시험한다. 두 시선을 바꿔 읽는 순서는 [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/)에 정리했다.

@@ -35,6 +35,13 @@ lang: ko
 
 [도시 관찰에서 층위를 바꾸기](/notes/city-observation-layers/)는 지표와 거리의 경험을, [가치사슬에서 무엇을 배우는가](/notes/value-chain-learning/)는 생산량과 학습 능력을, [포트폴리오의 생성 문법](/notes/portfolio-generative-grammar/)은 작품 하나와 반복 가능한 선택을 구분한다.
 
+## 다시 사용할 방법: Docs
+
+- **도시 관찰:** [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/) → [장면·반복·구조](/notes/city-observation-layers/), [여행자와 주민](/notes/traveler-and-resident/), [도시의 제약](/notes/comparing-cities-by-constraints/), [흐름과 머묾](/notes/urban-flow-and-stay/) → [아타미·시즈오카의 현장 비교](/notes/case-atami-shizuoka-urban-rhythm/)와 [한국·일본 거시·미시 비교](/notes/case-korea-japan-macro-micro/).
+- **Fediverse:** [서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/) → [분산화의 이동 비용](/notes/decentralization-not-freedom/), [서버의 규칙](/notes/server-as-governed-place/), [첫 관계](/notes/first-meaningful-interaction/) → [Mastodon·Misskey 기능 비교](/notes/case-mastodon-misskey-choice/), [가입 검토 봇](/notes/case-signup-bot-email-wait/), [가입과 관계 사이](/notes/case-mastodon-onboarding/).
+
+Docs는 관찰 절차를 안내하고 Notes는 개별 질문의 기원, 실제 사례와 한계를 보존한다. 공개 사례는 비공개 도시 카드에서 필요한 장소·시간·공간 조건만 선별했다.
+
 ## 말과 시장의 경계
 
 [번역은 말의 뜻뿐 아니라 관계를 옮긴다](/notes/translation-and-social-position/)는 표현이 놓인 맥락을, [지명은 누구의 시선으로 불리는가](/notes/place-names-and-perspective/)는 이름의 관점을 묻는다. [좋은 제품을 만들어도 선택지에 오르지 못할 수 있다](/notes/distribution-shapes-choice/)와 [브랜드 포지셔닝은 검증할 가설이다](/notes/positioning-as-testable-hypothesis/)는 생산자가 만든 가치가 소비자에게 보이고 이해되는 사이의 문턱을 살핀다.

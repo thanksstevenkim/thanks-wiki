@@ -22,3 +22,5 @@ lang: ko
 남는 질문: 규칙을 읽지 않고 들어온 사람도 그 공간의 경계를 알아차릴 수 있을까? 운영자가 조용할 때에는 무엇이 그 경계를 보여줄까?
 
 참고: [Mastodon의 가입 절차와 서버 선택 안내](https://docs.joinmastodon.org/user/signup/), [관리자의 모더레이션 수단](https://docs.joinmastodon.org/admin/moderation/).
+
+서버 선택부터 운영·이동까지 점검하려면 [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/)을 참고할 수 있다.
