@@ -3,18 +3,12 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const notes = await getCollection('notes');
-const url = new URL(Astro.request.url);
-const activeTag = url.searchParams.get('tag');
 
 const tagSet = new Set<string>();
 notes.forEach((note) => note.data.tags?.forEach((tag) => tagSet.add(tag)));
 const availableTags = Array.from(tagSet).sort();
 
-const filteredNotes = activeTag
-  ? notes.filter((note) => note.data.tags?.includes(activeTag))
-  : notes;
-
-const sortedNotes = [...filteredNotes].sort((a, b) => {
+const sortedNotes = [...notes].sort((a, b) => {
   const aDate = a.data.date ? new Date(a.data.date).getTime() : 0;
   const bDate = b.data.date ? new Date(b.data.date).getTime() : 0;
   return bDate - aDate;
@@ -27,9 +21,7 @@ const sortedNotes = [...filteredNotes].sort((a, b) => {
       <h1 style="margin: 0 0 0.25rem 0;">Notes</h1>
       <p class="muted">짧은 메모도 그대로 남겨둡니다. 태그나 상태로 가볍게 탐색하세요.</p>
     </div>
-    {activeTag && (
-      <div class="chip">tag: {activeTag}</div>
-    )}
+    <div id="active-tag" class="chip" style="display: none;"></div>
   </section>
 
   {availableTags.length > 0 && (
@@ -44,7 +36,7 @@ const sortedNotes = [...filteredNotes].sort((a, b) => {
 
   <div style="display: grid; gap: 0.4rem;">
     {sortedNotes.map((note) => (
-      <a class="note-link" href={`/notes/${note.slug}/`}>
+      <a class="note-link" href={`/notes/${note.slug}/`} data-tags={JSON.stringify(note.data.tags ?? [])}>
         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
           <strong>{note.data.title}</strong>
           {note.data.status && <span class="chip">{note.data.status}</span>}
@@ -55,5 +47,21 @@ const sortedNotes = [...filteredNotes].sort((a, b) => {
     ))}
 
     {sortedNotes.length === 0 && <p class="muted">조건에 맞는 노트가 없습니다.</p>}
+    <p id="no-tag-results" class="muted" style="display: none;">조건에 맞는 노트가 없습니다.</p>
   </div>
+  <script is:inline>
+    const activeTag = new URLSearchParams(window.location.search).get('tag');
+    if (activeTag) {
+      const badge = document.getElementById('active-tag');
+      badge.textContent = `tag: ${activeTag}`;
+      badge.style.display = 'inline-flex';
+      let visible = 0;
+      document.querySelectorAll('.note-link[data-tags]').forEach((note) => {
+        const matches = JSON.parse(note.getAttribute('data-tags') || '[]').includes(activeTag);
+        note.style.display = matches ? '' : 'none';
+        if (matches) visible++;
+      });
+      if (visible === 0) document.getElementById('no-tag-results').style.display = '';
+    }
+  </script>
 </BaseLayout>
