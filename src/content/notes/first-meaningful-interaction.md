@@ -53,3 +53,4 @@ Fediverse 유입·수익화의 병목을 묻는 대화와 가입 검토 봇이 �
 - [가입 검토 봇: 이메일 인증 대기를 장애로 읽었다](/notes/case-signup-bot-email-wait/)
 - [가입했지만 인증하지 않은 사람](/notes/signup-without-confirmation/)
 - [실패가 기록되지 않는 플랫폼](/notes/unrecorded-failure/)
+- 상위 방법: [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/)

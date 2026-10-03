@@ -6,6 +6,8 @@
 
 [질문 지도](https://thanks-wiki.vercel.app/notes/knowledge-map/)에서 개념과 사례를 함께 읽습니다. `concept`는 여러 사례에 적용해 볼 질문, `case`는 그 질문의 출발점과 검증 범위입니다. 두 문서는 서로 링크하며 사이트가 outgoing links와 backlinks를 표시합니다.
 
+[Docs](https://thanks-wiki.vercel.app/docs/kr/)는 여러 Notes와 실제 사례에서 반복된 질문을 방문·평가 때 다시 사용할 절차로 정리합니다. Notes는 그 절차의 기원, 개별 장면, 반례와 불확실성을 보존합니다.
+
 첫 개편 배치에서는 8개 핵심 개념과 가입 대기 노트를 보강하고, 12개 사례를 추가했습니다. POCO, 가나·코트디부아르의 카카오, 방글라데시 봉제, Pointless Talk, SHINee, Mastodon·Misskey, 한국·일본 비교, 실제 Mastodon 운영 장애를 다룹니다. 새 사례의 원문 범위와 한계는 각 문서에 적었습니다.
 
 ## 작성 원칙
@@ -50,4 +52,3 @@ PR 전에는 사례 근거, 개념↔사례 링크, 다시 사용할 질문, 개
 This repository and https://thanks-wiki.vercel.app constitute the **only official source** of thanks-wiki.
 
 Forks and mirrors must not present themselves as official or authoritative versions of this project.
-

@@ -18,3 +18,5 @@ lang: ko
 이것은 비교 자체를 포기하자는 말이 아니다. 도시마다 같은 항목을 묻되 그 항목이 놓인 조건을 먼저 적자는 것이다. [도시를 '살기 좋은가'로만 평가하면 사라지는 것](/notes/city-beyond-liveability/)은 누구에게 좋은가를, [도시의 통로는 어디서 머무는 장소가 되는가](/notes/urban-flow-and-stay/)는 한 공간 안에서 서로 다른 속도가 부딪히는 지점을 본다.
 
 남는 질문: 도시가 제약을 해결한 비용이 다른 장소나 다른 사람에게 넘어가지는 않았는가?
+
+[아타미·시즈오카 사례](/notes/case-atami-shizuoka-urban-rhythm/)에서 경사 있는 관광 동선과 역 앞 환승 공간을 같은 순위에 놓기 어려운 이유를 볼 수 있다. 비교 조건을 맞추는 순서는 [도시 관찰 Docs](/docs/kr/observing-and-comparing-cities/)에 정리했다.

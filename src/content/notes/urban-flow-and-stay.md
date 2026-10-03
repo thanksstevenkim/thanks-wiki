@@ -20,3 +20,5 @@ lang: ko
 남는 질문: 빠른 이동을 방해하지 않으면서 머무를 권리를 가진 사람은 누구인가? 머무를 곳이 없는 길에서는 어떤 활동이 사라지는가?
 
 참고: [Gehl Institute의 Public Life Data Protocol](https://github.com/gehl-institute/pldp)은 보행과 앉기 등 공공 공간의 서로 다른 활동을 관찰 항목으로 구분한다.
+
+이 질문을 현장에서 적용할 순서는 [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/)에 있다. [아타미·시즈오카 사례](/notes/case-atami-shizuoka-urban-rhythm/)는 이동 방향과 시간 조건을 함께 적은 출발 장면이다.

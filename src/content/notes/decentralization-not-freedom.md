@@ -50,3 +50,4 @@ Fediverse 대화에서 Mastodon 외에 Misskey 계열 서버도 같은 네트워
 - [Mastodon·Misskey: 연결되어도 경험은 같지 않다](/notes/case-mastodon-misskey-choice/)
 - [서버는 규칙으로 만들어지는 장소](/notes/server-as-governed-place/)
 - [가입 후 첫 관계는 어떻게 만들어지는가](/notes/first-meaningful-interaction/)
+- 상위 방법: [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/)
