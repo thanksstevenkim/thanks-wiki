@@ -13,6 +13,10 @@ Notes는 관찰·사례·가설과 생각이 생긴 맥락을 남깁니다. Docs
 
 - [운영 사건에서 실패 경계를 찾는 방법](/docs/kr/diagnosing-operational-boundaries/) — 마지막 성공과 첫 미확인을 나눠 원인을 좁히고, 실제 회복 범위까지 기록하는 절차
 
+## 산업
+
+- [가치사슬에서 학습과 결정권을 읽는 방법](/docs/kr/reading-value-chain-learning/) — 현재 단계의 역량, 결정권, 판로와 보상이 실제로 어디에 남는지 확인하는 순서
+
 ## 플랫폼과 커뮤니티
 
 - [Fediverse 서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/) — 소프트웨어, 가입 단계, 관계 발견, 운영 규칙과 이동 비용을 따라가는 절차
