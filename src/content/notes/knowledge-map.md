@@ -34,11 +34,14 @@ lang: ko
 
 ## 장소, 생산, 문화
 
+산업의 역량과 판매 성과를 구분하는 순서는 [가치사슬에서 학습과 결정권을 읽는 방법](/docs/kr/reading-value-chain-learning/)에서 시작한다.
+
 [도시 관찰에서 층위를 바꾸기](/notes/city-observation-layers/)는 지표와 거리의 경험을, [가치사슬에서 무엇을 배우는가](/notes/value-chain-learning/)는 생산량과 학습 능력을, [포트폴리오의 생성 문법](/notes/portfolio-generative-grammar/)은 작품 하나와 반복 가능한 선택을 구분한다.
 
 ## 다시 사용할 방법: Docs
 
 - **도시 관찰:** [도시를 관찰하고 비교하는 방법](/docs/kr/observing-and-comparing-cities/) → [장면·반복·구조](/notes/city-observation-layers/), [여행자와 주민](/notes/traveler-and-resident/), [도시의 제약](/notes/comparing-cities-by-constraints/), [흐름과 머묾](/notes/urban-flow-and-stay/) → [아타미·시즈오카의 현장 비교](/notes/case-atami-shizuoka-urban-rhythm/)와 [한국·일본 거시·미시 비교](/notes/case-korea-japan-macro-micro/).
+- **산업:** [가치사슬에서 학습과 결정권을 읽는 방법](/docs/kr/reading-value-chain-learning/) → [단계별 학습 질문](/notes/value-chain-learning/) → [카카오](/notes/case-cocoa-ghana-cote-divoire/)와 [방글라데시 의류](/notes/case-bangladesh-garment-design/).
 - **운영 사건:** [실패 경계를 찾는 방법](/docs/kr/diagnosing-operational-boundaries/) → [장애 기록](/notes/incident-to-runbook/) → [Cloudflare 521](/notes/case-cloudflare-521-nginx/), [Elasticsearch 이름](/notes/case-elasticsearch-service-name/), [가입 검토 봇](/notes/case-signup-bot-email-wait/), [fork CI](/notes/case-mastodon-fork-ci/).
 - **Fediverse:** [서버와 커뮤니티를 이해하는 방법](/docs/kr/understanding-fediverse-communities/) → [분산화의 이동 비용](/notes/decentralization-not-freedom/), [서버의 규칙](/notes/server-as-governed-place/), [첫 관계](/notes/first-meaningful-interaction/) → [Mastodon·Misskey 기능 비교](/notes/case-mastodon-misskey-choice/), [가입 검토 봇](/notes/case-signup-bot-email-wait/), [가입과 관계 사이](/notes/case-mastodon-onboarding/).
 
