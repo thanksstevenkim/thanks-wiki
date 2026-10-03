@@ -47,6 +47,7 @@ lang: ko
 
 ## 연결
 
+- 상위 방법: [가치사슬에서 학습과 결정권을 읽는 방법](/docs/kr/reading-value-chain-learning/) — 기존 활동부터 역량·결정권·판로·보상을 확인하는 순서
 - [가나·코트디부아르: 카카오 생산과 가공을 나눠 생각하다](/notes/case-cocoa-ghana-cote-divoire/)
 - [방글라데시: 봉제 기술을 패션 설계로 바꾸는 구상](/notes/case-bangladesh-garment-design/)
 - [좋은 제품을 만들어도 선택지에 오르지 못할 수 있다](/notes/distribution-shapes-choice/)
