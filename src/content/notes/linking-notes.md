@@ -2,8 +2,8 @@
 title: 연결 중심으로 생각하기
 date: 2024-06-16
 tags:
-  - linking
   - wiki
+  - method
 status: growing
 lang: ko
 ---

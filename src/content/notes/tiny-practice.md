@@ -6,4 +6,4 @@ lang: ko
 
 - 하루 한 문장 메모 남기기
 - 읽은 글의 한 줄 요약 적기
-- [[linking-notes]] 로 이어 붙이기
+- [연결 중심으로 생각하기](/notes/linking-notes/)로 이어 붙이기

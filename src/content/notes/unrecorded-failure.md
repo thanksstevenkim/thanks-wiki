@@ -4,7 +4,7 @@ date: 2026-10-03
 tags:
   - platform
   - failure
-  - metrics
+  - observation
 status: growing
 lang: ko
 ---

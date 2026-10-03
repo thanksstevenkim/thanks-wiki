@@ -3,8 +3,8 @@ title: 정답을 요구하는 시스템과 정답이 없는 사람
 date: 2026-10-03
 tags:
   - system
-  - career
-  - identity
+  - choice
+  - perspective
 status: growing
 lang: ko
 ---

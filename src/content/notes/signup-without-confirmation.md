@@ -2,9 +2,9 @@
 title: 가입했지만 인증하지 않은 사람
 date: 2026-10-03
 tags:
-  - signup
-  - friction
   - platform
+  - failure
+  - access
 status: seed
 lang: ko
 ---

@@ -3,8 +3,8 @@ title: 싼 것이 언제 선택지가 되고 언제 함정이 되는가
 date: 2026-10-03
 tags:
   - choice
-  - cost
   - access
+  - economy
 status: growing
 lang: ko
 ---

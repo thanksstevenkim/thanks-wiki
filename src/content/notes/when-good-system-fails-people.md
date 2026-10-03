@@ -4,7 +4,7 @@ date: 2026-10-03
 tags:
   - system
   - failure
-  - people
+  - society
 status: seed
 lang: ko
 ---
